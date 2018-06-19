@@ -17,7 +17,7 @@ public class OneTest {
   @Before
   public void beforeFoo(){
     File file = new File("out.txt");
-    if(file.exists()){
+    if(!file.exists()){
       file.delete();
     }
   }
@@ -53,5 +53,9 @@ public class OneTest {
     List<String> list = readOutFile();
     assertEquals("freets", list.get(2));
   }
+  @Test
+  public void method1(){
+    System.out.println(1);
 
+  }
 }
